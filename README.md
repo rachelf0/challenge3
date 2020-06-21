@@ -32,5 +32,5 @@ THEN the password is either displayed in an alert or written to the page
 ## URL
 https://rachelf0.github.io/challenge3/
 
-##Contribution / Credits
+## Contribution / Credist
 Made with ❤️ by Rachel Fritz. Shout outs to the help of my awesome TA's and study group!
