@@ -36,19 +36,22 @@ function getPasswordOptions() {
   var specialCharacters = confirm(
     'Click OK to confirm including special characters.'
   );
-
+  console.log("specialCharacters is " + specialCharacters);
 
   var numbers = confirm(
     'Click OK to confirm including special characters.'
   );
+  console.log("numbers is " + numbers);
 
   var lowerCased = confirm(
     'Click OK to confirm including lowercase characters.'
   );
+  console.log("lowercase is " + lowerCased);
 
   var upperCased = confirm(
     'Click OK to confirm including uppercase characters.'
   );
+  console.log("uppercase is " + upperCased);
 
   if (
     specialCharacters === false &&
@@ -56,10 +59,11 @@ function getPasswordOptions() {
     lowerCased === false &&
     upperCased === false
   ) {
-    alert('Must select at least one characters type.');
+    alert('Password must contain at least one character type.');
     return;
   }
 
+  //Save users password options
   var passwordOptions = {
     length: length,
     specialCharacters: specialCharacters,
@@ -87,6 +91,7 @@ function generatePassword() {
 
   var possibleCharacters = [];
 
+
   if (options.specialCharacters) {
     possibleCharacters.push.apply(possibleCharacters, SpecialCharacters);
   }
@@ -103,14 +108,14 @@ function generatePassword() {
     possibleCharacters.push.apply(possibleCharacters, UpperCasedCharacters);
   }
 
-  for (var i = 0; i < options.length; i++) {
+  for (i = 0; i < options.length; i++) {
     var possibleCharacter = getRandom(possibleCharacters);
 
     result.push(possibleCharacter);
   }
 
 //String all the characters together
-  return result.join('');
+  return result.join('')
 
 }
 
